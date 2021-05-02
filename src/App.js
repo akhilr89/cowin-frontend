@@ -6,7 +6,7 @@ function App() {
   const [date, setDate] = useState(null);
   useEffect(() => {
     async function getDate() {
-      const res = await fetch('/api/date');
+      const res = await fetch('https://cdn-api.co-vin.in/api/v2/appointment/sessions/public/calendarByPin?pincode=532242&date=04-05-2021');
       const newDate = await res.text();
       setDate(newDate);
     }
@@ -50,6 +50,7 @@ function App() {
       <br />
       <h2>The date according to Go is:</h2>
       <p>{date ? date : 'Loading date...'}</p>
+
     </main>
   );
 }
