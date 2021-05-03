@@ -167,10 +167,10 @@ function PinForm(props) {
           />
         </div>
         <div class="row">
-          <button type="submit" className="btn btn-danger myButton col-sm">
+          <button type="submit" className="btn btn-danger col-sm shadow-none">
             Subscribe
           </button>
-          <button onClick={handleSubmit} className="btn btn-warning col-sm">
+          <button onClick={handleSubmit} className="btn btn-warning col-sm shadow-none">
             Check Availability
           </button>
         </div>
@@ -341,10 +341,10 @@ function LoginForm(props) {
           />
         </div>
         <div class="row">
-          <button type="submit" className="btn btn-danger myButton col-sm">
+          <button type="submit" className="btn btn-danger myButton col-sm shadow-none">
             Subscribe
           </button>
-          <button onClick={handleSubmit} className="btn btn-warning col-sm">
+          <button onClick={handleSubmit} className="btn btn-warning col-sm shadow-none">
             Check Availability
           </button>
           {/*district*/}
