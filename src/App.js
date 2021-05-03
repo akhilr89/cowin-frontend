@@ -4,7 +4,6 @@ import "./App.css";
 import $ from "jquery";
 
 function App() {
-  const [date, setDate] = useState(null);
   // useEffect(() => {
   //   async function getDate() {
   //     const res = await fetch(
@@ -28,8 +27,22 @@ function App() {
       </p>
       <br />
       <LoginForm />
-      <h2 className="helloo">The date according to Go is:</h2>
-      <p>{date ? date : "Loading date..."}</p>
+      
+      <table class="table">
+<thead>
+<tr>
+  <th scope="col">Centre Name</th>
+  <th scope="col">First</th>
+  <th scope="col">Last</th>
+  <th scope="col">Handle</th>
+</tr>
+</thead>
+<tbody id="tbody">
+<tr className="insideTable">
+</tr>
+</tbody>
+</table>
+
     </main>
   );
 }
@@ -203,32 +216,27 @@ function LoginForm(props) {
       success: function (result) {
         console.log(result.centers);
         var auxArr2 = []
+        var sessionArr = []
         $.each(result.centers, function (i, option) {
+            console.log(result.centers[i].sessions);
+            $.each(result.centers[i].sessions, function (j, option2) {
+              sessionArr[j] =
+                "<td>" + 
+                "<p>available capacity is : " +result.centers[i].sessions[j].available_capacity +"</p>, <p> min age is: "+result.centers[i].sessions[j].min_age_limit + "</p>, " + result.centers[i].sessions[j].vaccine + " " +
+                "</td>";
+            });
           auxArr2[i] =
             "<p>" + 
-            result.centers[i].name +", "+result.centers[i].block_name + ", " + result.centers[i].state_name + ", " + result.centers[i].pincode +
+            result.centers[i].name +", "+result.centers[i].block_name + ", " + result.centers[i].state_name + ", " + result.centers[i].pincode + sessionArr.join("") +
             "</p>";
         });
-        $(".helloo").html(auxArr2.join(""));
+        $(".insideTable").html(auxArr2.join(""));
       },
     });
   };
   let handleStateChange = (e) => {
-    // fetch(
-    //   "https://cdn-api.co-vin.in/api/v2/admin/location/districts/" +
-    //     e.target.value
-    // )
-    //   .then((response) => response.json())
-    //   .then((response) => handleSuccessResponse(response));
-
-    // let handleSuccessResponse = (success) => {
-    //   allDists = success.districts;
-    //   setAllDists(success.districts);
-    //   console.log("dsdsd :", allDists);
-    //     var selectedState;
-    //
-    // };
     $("#districtdd").empty();
+    $("#districtdd").append("<option>-- Select a District --</option>");
     $.ajax({
       url:
         "https://cdn-api.co-vin.in/api/v2/admin/location/districts/" +
@@ -258,16 +266,13 @@ function LoginForm(props) {
       {statee}
       <br />
 
-      <select id="state-dd" onChange={handleStateChange}>
+      <select id="state-dd" className="form-select" onChange={handleStateChange}>
         <option value="⬇️ Select a State ⬇️"> -- Select a State -- </option>
-        {/* Mapping through each fruit object in our fruits array
-          and returning an option element with the appropriate attributes / values.
-         */}
         {states.map((fruit) => (
           <option value={fruit.state_id}>{fruit.state_name}</option>
         ))}
       </select>
-      <select id="districtdd" onChange={handleDistrictChange}>
+      <select id="districtdd" className="form-select" onChange={handleDistrictChange}>
         <option value="⬇️ Select a District ⬇️">
           {" "}
           -- Select a District --{" "}
@@ -279,8 +284,8 @@ function LoginForm(props) {
       </select>
       <input class="form-control mr-sm-2" name="date" required type="date" placeholder="Date (dd-mm-yyyy)"
         aria-label="Search"/>
-      <button type="submit" className="myButton">
-        Login
+      <button type="submit" className="button myButton">
+        Submit
       </button>
       {district}
     </form>

@@ -205,8 +205,8 @@ function LoginForm(props) {
         var auxArr2 = []
         $.each(result.centers, function (i, option) {
           auxArr2[i] =
-            "<p>" +
-            result.centers[i].name +", "+result.centers[i].district_name + ", " + result.centers[i].pincode
+            "<p>" + 
+            result.centers[i].name +", "+result.centers[i].block_name + ", " + result.centers[i].state_name + ", " + result.centers[i].pincode +
             "</p>";
         });
         $(".helloo").html(auxArr2.join(""));
