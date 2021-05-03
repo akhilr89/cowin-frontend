@@ -16,13 +16,19 @@ function App() {
         <br/>
         <div className="container">
     <div className="row">
-      <PinForm className="col-sm"/>
-      <b className="col-sm">or</b>
-      <LoginForm className="col-sm"/>
+    <div className="col-sm-5">
+      <PinForm />
+      </div>
+      <b className="col-sm-2">or</b>
+      <div className="col-sm-5">
+        <LoginForm />
+        </div>
+      
       {/*district*/}
     </div>
     </div>
-      <table className="table table-striped">
+    <div className="py-3">
+      <table className="table table-striped py-3">
         <thead id="thead">
           <tr>
             <th scope="col">Centre Name</th>
@@ -38,6 +44,7 @@ function App() {
         <tbody id="tbody">
         </tbody>
       </table>
+      </div>
     </main>
   );
 }
@@ -289,7 +296,6 @@ function LoginForm(props) {
   return (
     <form onSubmit={activateLasers}>
       {/*statee*/}
-      <br />
       <div class="container">
         <div class="row">
           <select
