@@ -16,18 +16,15 @@ function App() {
   // }, []);
   return (
     <main>
-      <h1 id="helloo">Create React App + Go API</h1>
-      <p>
-        which contains a serverless <a href="https://golang.org/">Go</a>{" "}
-        function. See{" "}
-        <a href="/api/date">
-          <code>api/date</code> for the Date API with Go
-        </a>
-        .
-      </p>
+      <h1 id="helloo">Subscribe for availability</h1>
+
       <br />
-      <LoginForm />
       
+   
+      <LoginForm />
+         <br/>
+         <br/>
+      <SubscribeForm/>
       <table class="table">
 <thead>
 <tr>
@@ -46,6 +43,82 @@ function App() {
     </main>
   );
 }
+
+function SubscribeForm(props) {
+
+  let [allDists, setAllDists] = useState(null);
+  allDists = [];
+  var selectedDistrict;
+  // Using state to keep track of what the selected fruit is
+  let [statee, setStatee] = useState("⬇️ Select a State ⬇️");
+  let [district, setDistrict] = useState("⬇️ Select a District ⬇️");
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    $.ajax({
+      url:
+        "https://cdn-api.co-vin.in/api/v2/appointment/sessions/public/calendarByDistrict?district_id=" +
+        district +
+        "&date=" +
+        "04-05-2021",
+      success: function (result) {
+        console.log(result.centers);
+        var auxArr2 = []
+        var sessionArr = []
+        $.each(result.centers, function (i, option) {
+            console.log(result.centers[i].sessions);
+            $.each(result.centers[i].sessions, function (j, option2) {
+              sessionArr[j] =
+               
+                "<p>available capacity is : " +result.centers[i].sessions[j].available_capacity +"</p>, <p> min age is: "+result.centers[i].sessions[j].min_age_limit + "</p>, " + result.centers[i].sessions[j].vaccine + " "  ;
+            });
+          auxArr2[i] =
+            "<p>" + 
+            result.centers[i].name +", "+result.centers[i].block_name + ", " + result.centers[i].state_name + ", " + result.centers[i].pincode + sessionArr.join("") +
+            "</p>";
+        });
+        $(".insideTable").html(auxArr2.join(""));
+      },
+    });
+  };
+  let handleStateChange = (e) => {
+    $("#districtdd").empty();
+    $("#districtdd").append("<option>-- Select a District --</option>");
+    $.ajax({
+      url:
+        "https://cdn-api.co-vin.in/api/v2/admin/location/districts/" +
+        e.target.value,
+      success: function (result) {
+        if (result.isOk === false) alert(result.message);
+        var auxArr2 = [];
+        $.each(result.districts, function (i, option) {
+          auxArr2[i] =
+            "<option value='" +
+            result.districts[i].district_id +
+            "'>" +
+            result.districts[i].district_name +
+            "</option>";
+        });
+        $("#districtdd").append(auxArr2.join(""));
+      },
+    });
+    setStatee(e.target.value);
+  };
+  let handleDistrictChange = (e) => {
+    setDistrict(e.target.value);
+  };
+  return (
+    <form onSubmit={handleSubmit}>
+      <br />
+
+      <input class="form-control mr-sm-2" name="date" required type="email" placeholder="Enter your E-mail"
+        aria-label="Search"/>
+      <button type="submit" className="button myButton">
+        Subscribe
+      </button>
+    </form>
+  );
+}
+
 
 function LoginForm(props) {
   let states = [
@@ -221,9 +294,8 @@ function LoginForm(props) {
             console.log(result.centers[i].sessions);
             $.each(result.centers[i].sessions, function (j, option2) {
               sessionArr[j] =
-                "<td>" + 
-                "<p>available capacity is : " +result.centers[i].sessions[j].available_capacity +"</p>, <p> min age is: "+result.centers[i].sessions[j].min_age_limit + "</p>, " + result.centers[i].sessions[j].vaccine + " " +
-                "</td>";
+               
+                "<p>available capacity is : " +result.centers[i].sessions[j].available_capacity +"</p>, <p> min age is: "+result.centers[i].sessions[j].min_age_limit + "</p>, " + result.centers[i].sessions[j].vaccine + " "  ;
             });
           auxArr2[i] =
             "<p>" + 
