@@ -302,7 +302,7 @@ function App() {
                             </a>
                         </li>
                     </ul>
-                    <div class="footer-copyright">&copy; 2018 Switch, all rights reserved</div>
+                    <div class="footer-copyright">&copy; 2021 Vasant & Anuj, all rights reserved</div>
                 </div>
             </div>
         </footer>
