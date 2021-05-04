@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import "./App.css";
 import $ from "jquery";
 import states from "./states.js";
+
 function App() {
   return (
     <main>
@@ -132,15 +133,20 @@ function PinForm(props) {
         setDate(res);
       };
   function activateLasers(e) {
-    e.preventDefault();
-    console.log("The link was clicked.");
+   e.preventDefault();
+    var date = $(".date").val();
+    var email = $(".email").val();
+    var pincode = $(".pincode").val();
+    $.post("https://cowin-realpython.herokuapp.com/addP", {email: email, pincode: pincode, date: date}, function(result){
+        $("#helloo").html(result);
+    });
   }
   return (
     <form onSubmit={activateLasers}>
       <div class="container">
         <div class="row">
           <input
-            class="form-control mr-sm-2"
+            class="form-control mr-sm-2 pincode"
             name="pincode"
             required
             type="text"
@@ -149,7 +155,7 @@ function PinForm(props) {
             aria-label="PinCode"
           />
           <input
-            class="form-control mr-sm-2"
+            class="form-control mr-sm-2 date"
             name="date"
             required
             type="date"
@@ -158,8 +164,8 @@ function PinForm(props) {
             aria-label="Search"
           />
           <input
-            class="form-control mr-sm-2"
-            name="date"
+            class="form-control mr-sm-2 email"
+            name="email"
             required
             type="email"
             placeholder="Enter your E-mail"
@@ -290,8 +296,14 @@ function LoginForm(props) {
         setDate(res);
       };
   function activateLasers(e) {
-    e.preventDefault();
-    console.log("The link was clicked.");
+   e.preventDefault();
+    var date = $(".date").val();
+    var email = $(".email").val();
+    var distict = $(".distict").val();
+    $.post("https://cowin-realpython.herokuapp.com/addD", {email: email, district: district, date: date}, function(result){
+        $("#helloo").html(result.success);
+        console.log(result);
+    });
   }
   return (
     <form onSubmit={activateLasers}>
@@ -300,7 +312,8 @@ function LoginForm(props) {
         <div class="row">
           <select
             id="state-dd"
-            className="form-select col-sm"
+            name="state"
+            className="form-select col-sm state"
             onChange={handleStateChange}
           >
             <option value="⬇️ Select a State ⬇️"> -- Select a State -- </option>
@@ -310,7 +323,8 @@ function LoginForm(props) {
           </select>
           <select
             id="districtdd"
-            className="form-select col-sm"
+            name="district"
+            className="form-select col-sm distict"
             onChange={handleDistrictChange}
           >
             <option value="⬇️ Select a District ⬇️">
@@ -323,7 +337,7 @@ function LoginForm(props) {
             ))}
           </select>
           <input
-            class="form-control mr-sm-2"
+            class="form-control mr-sm-2 date"
             name="date"
             required
             type="date"
@@ -332,8 +346,8 @@ function LoginForm(props) {
             aria-label="Search"
           />
           <input
-            class="form-control mr-sm-2"
-            name="date"
+            class="form-control mr-sm-2 email"
+            name="email"
             required
             type="email"
             placeholder="Enter your E-mail"
