@@ -297,9 +297,9 @@ function LoginForm(props) {
       };
   function activateLasers(e) {
    e.preventDefault();
-    var date = $(".date").val();
-    var email = $(".email").val();
-    var distict = $(".distict").val();
+    var date = $("#date").val();
+    var email = $("#email").val();
+    var distict = $("#districtdd").val();
     $.post("https://cowin-realpython.herokuapp.com/addD", {email: email, district: district, date: date}, function(result){
         $("#helloo").html(result.success);
         console.log(result);
@@ -337,9 +337,10 @@ function LoginForm(props) {
             ))}
           </select>
           <input
-            class="form-control mr-sm-2 date"
+            class="form-control mr-sm-2"
             name="date"
             required
+            id="date"
             type="date"
             onChange={handleDateChange}
             placeholder="Date (dd-mm-yyyy)"
@@ -350,6 +351,7 @@ function LoginForm(props) {
             name="email"
             required
             type="email"
+            id="email"
             placeholder="Enter your E-mail"
             aria-label="Search"
           />
