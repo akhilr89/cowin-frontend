@@ -158,7 +158,7 @@ function App() {
                       </div>
                       <div class="feature-content">
                         <h3 class="feature-title mt-0">Is this data genuine?</h3>
-                        <p class="text-sm mb-0">Government has made COWIN API public and free. We make of that api and give Notifications.</p>
+                        <p class="text-sm mb-0">Government has made COWIN API public(with some usage limits) and free. We make use of that api and give Notifications.</p>
                       </div>
                     </div>
                   </div>
@@ -192,7 +192,7 @@ function App() {
               </div>
             </div>
           </section>
-          
+
             <section class="section">
                   <div class="container-smm">
                       <div class="cta-inner section-inner">
