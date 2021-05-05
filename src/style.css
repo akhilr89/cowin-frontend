@@ -2109,7 +2109,10 @@ hr::after,
 .is-loaded .hero-media-image {
 	-webkit-animation: fadeInLeftMedia 1s 0.2s both cubic-bezier(0.3, 0, 0.2, 1);
 	animation: fadeInLeftMedia 1s 0.2s both cubic-bezier(0.3, 0, 0.2, 1);
-	will-change: transform
+	will-change: transform;
+	  width: 538px;
+	  height: 380px;
+	object-fit: cover;
 }
 
 .is-loaded .hero-media-illustration-image {
@@ -2121,7 +2124,10 @@ hr::after,
 .is-loaded .features-box {
 	-webkit-animation: fadeUpBox 1s 0.2s both cubic-bezier(0.3, 0, 0.2, 1);
 	animation: fadeUpBox 1s 0.2s both cubic-bezier(0.3, 0, 0.2, 1);
-	will-change: transform
+	will-change: transform;
+		  width: 540px;
+		  height: 370px;
+		object-fit: cover;
 }
 
 .is-loaded .header-illustration-image {

@@ -64,7 +64,12 @@ b,
 strong {
 	font-weight: bolder
 }
-
+.bbb {
+	color: #5f6c80;
+}
+.ppp {
+		color: #5f6c80;
+}
 code,
 kbd,
 samp {
@@ -659,6 +664,13 @@ label {
 
 .container-sm {
 	max-width: 848px
+}
+
+.container-smm {
+	max-width: 1050px;
+	margin: 0 auto;
+	padding-left: 10px;
+	padding-right: 10px
 }
 
 .container .container-sm {
@@ -2097,7 +2109,11 @@ hr::after,
 .is-loaded .hero-media-image {
 	-webkit-animation: fadeInLeftMedia 1s 0.2s both cubic-bezier(0.3, 0, 0.2, 1);
 	animation: fadeInLeftMedia 1s 0.2s both cubic-bezier(0.3, 0, 0.2, 1);
-	will-change: transform
+	will-change: transform;
+	  width: 538px;
+	  height: 380px;
+	
+	object-fit: cover;
 }
 
 .is-loaded .hero-media-illustration-image {
