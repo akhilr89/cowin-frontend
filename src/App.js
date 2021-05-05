@@ -195,7 +195,7 @@ function App() {
 
           
             <section class="section">
-                  <div class="container-sm">
+                  <div class="container-smm">
                       <div class="cta-inner section-inner">
                           <div class="cta-header text-center ">
                               <h2 class="section-title mt-0 py-6" id="helloo">Subscribe for availability</h2>
