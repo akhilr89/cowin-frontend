@@ -71,7 +71,6 @@ function App() {
           if (labelText) {
             $('.label-text').html('light');
           }
-            
           } else {
             body.classList.remove('lights-off')
             if (labelText) {
@@ -80,8 +79,9 @@ function App() {
           }
     };
 
+
   return (
-    <body class="is-boxed has-animations">
+
       <div class="body-wrap boxed-container">
       <header class="site-header">
             <div class="container">
@@ -105,11 +105,11 @@ function App() {
           <section class="hero">
             <div class="container">
               <div class="hero-inner">
-                ./<div class="hero-copy">
-                  <h1 class="hero-title mt-0">Tierd of checking availability?</h1>
+                <div class="hero-copy">
+                  <h1 class="hero-title mt-0">Tired of checking availability?</h1>
                   <p class="hero-paragraph">Sit back and relax. Our script will check for availability every minute and let you know if its available.</p>
                   <div class="hero-cta">
-                    <a class="button button-primary"  href="#">Subscribe now</a>
+                    <a class="button button-primary" href="#">Subscribe now</a>
                
                   </div>
                 </div>
@@ -136,8 +136,8 @@ function App() {
               <div class="features-inner section-inner has-bottom-divider">
                 <div class="features-header text-center">
                   <div class="container-sm">
-                    <h2 class="section-title mt-0">The Product</h2>
-                    <p class="section-paragraph">Lorem ipsum is common placeholder text used to demonstrate the graphic elements of a document or visual presentation.</p>
+                    <h2 class="section-title mt-0">How it Works?</h2>
+                    <p class="section-paragraph">Guide on how to make use of this website</p>
                     <div class="features-image">
                       <img class="features-illustration asset-dark" src="images/features-illustration-dark.svg" alt="Feature illustration" />
                       <img class="features-box asset-dark" src="images/features-box-dark.svg" alt="Feature box" />
@@ -156,8 +156,8 @@ function App() {
                         <img class="asset-dark" src="images/feature-01-dark.svg" alt="Feature 01" />
                       </div>
                       <div class="feature-content">
-                        <h3 class="feature-title mt-0">Where do we get data from?</h3>
-                        <p class="text-sm mb-0">Government has made COWIN API public and free.</p>
+                        <h3 class="feature-title mt-0">Is this data genuine?</h3>
+                        <p class="text-sm mb-0">Government has made COWIN API public and free. We make of that api and give Notifications.</p>
                       </div>
                     </div>
                   </div>
@@ -172,7 +172,7 @@ function App() {
                       </div>
                       <div class="feature-content ">
                         <h3 class="feature-title mt-0">Open-Source</h3>
-                        <p class="text-sm mb-0">Open-source is LOVE. Check our repo and if contribute if possible</p>
+                        <p class="text-sm mb-0">Open-source is LOVE. Check our repo and contribute if possible</p>
                       </div>
                     </div>
                   </div>
@@ -183,8 +183,8 @@ function App() {
                         <img class="asset-dark" src="images/feature-03-dark.svg" alt="Feature 03" />
                       </div>
                       <div class="feature-content">
-                        <h3 class="feature-title mt-0">Discover</h3>
-                        <p class="text-sm mb-0">Lorem ipsum dolor sit amet, consecte adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua dui.</p>
+                        <h3 class="feature-title mt-0">Check Availability and Subscribe</h3>
+                        <p class="text-sm mb-0"> Enter your PinCode or District along with the date to get notified if any spot is available</p>
                       </div>
                     </div>
                   </div>
@@ -242,7 +242,7 @@ function App() {
                             <h2 class="section-title mt-0">Visit Cowin Portal and Register</h2>
                             <p class="section-paragraph">Some paragraph.</p>
 							<div class="cta-cta">
-								<a class="button button-primary" target="_blank" href="https://www.cowin.gov.in/">Open COWIN</a>
+								<a class="button button-primary" target="_blank" rel="noopener noreferrer" href="https://www.cowin.gov.in/">Open COWIN</a>
 							</div>
 					    </div>
                     </div>
@@ -277,30 +277,7 @@ function App() {
                         </li>
                     </ul>
                     <ul class="footer-social-links list-reset">
-                        <li>
-                            <a href="#">
-                                <span class="screen-reader-text">Facebook</span>
-                                <svg width="16" height="16" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M6.023 16L6 9H3V6h3V4c0-2.7 1.672-4 4.08-4 1.153 0 2.144.086 2.433.124v2.821h-1.67c-1.31 0-1.563.623-1.563 1.536V6H13l-1 3H9.28v7H6.023z" fill="#FFF"/>
-                                </svg>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <span class="screen-reader-text">Twitter</span>
-                                <svg width="16" height="16" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M16 3c-.6.3-1.2.4-1.9.5.7-.4 1.2-1 1.4-1.8-.6.4-1.3.6-2.1.8-.6-.6-1.5-1-2.4-1-1.7 0-3.2 1.5-3.2 3.3 0 .3 0 .5.1.7-2.7-.1-5.2-1.4-6.8-3.4-.3.5-.4 1-.4 1.7 0 1.1.6 2.1 1.5 2.7-.5 0-1-.2-1.5-.4C.7 7.7 1.8 9 3.3 9.3c-.3.1-.6.1-.9.1-.2 0-.4 0-.6-.1.4 1.3 1.6 2.3 3.1 2.3-1.1.9-2.5 1.4-4.1 1.4H0c1.5.9 3.2 1.5 5 1.5 6 0 9.3-5 9.3-9.3v-.4C15 4.3 15.6 3.7 16 3z" fill="#FFF"/>
-                                </svg>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <span class="screen-reader-text">Google</span>
-                                <svg width="16" height="16" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M7.9 7v2.4H12c-.2 1-1.2 3-4 3-2.4 0-4.3-2-4.3-4.4 0-2.4 2-4.4 4.3-4.4 1.4 0 2.3.6 2.8 1.1l1.9-1.8C11.5 1.7 9.9 1 8 1 4.1 1 1 4.1 1 8s3.1 7 7 7c4 0 6.7-2.8 6.7-6.8 0-.5 0-.8-.1-1.2H7.9z" fill="#FFF"/>
-                                </svg>
-                            </a>
-                        </li>
+
                     </ul>
                     <div class="footer-copyright">&copy; 2021 Vasant & Anuj, all rights reserved</div>
                 </div>
@@ -308,7 +285,7 @@ function App() {
         </footer>
 
       </div>
-    </body>
+
   );
 }
 
@@ -335,11 +312,11 @@ function PinForm(props) {
         date,
       success: function (result) {
         console.log(result.centers);
-        var topStr = "<tr> <th scope='col'>Centre Name</th>";
+        var topStr = "<tr> <th scope='col'><b class='bbb'>Centre Name</b></th>";
         var dt = new Date(orDate);
         for (var i = 0; i < 7; i++) {
           var str = dt.toDateString().substring(4, 16);
-          topStr += "<th scope='col'>" + str + "</th>";
+          topStr += "<th scope='col'><b class='bbb'>" + str + "</th>";
           dt.setDate(dt.getDate() + 1);
         }
         topStr += "</tr>"
@@ -350,7 +327,7 @@ function PinForm(props) {
           console.log(result.centers[i].sessions);
           for (var j = 0; j < 7; j++) {
             if (result.centers[i].sessions[j] == null) {
-              sessionArr[j] = "<td><p>NA</p></td>";
+              sessionArr[j] = "<td><p class='ppp'>NA</p></td>";
             } else {
               sessionArr[j] =
                 "<td><div class='container'><div class='row'>" +
@@ -367,8 +344,8 @@ function PinForm(props) {
           $.each(result.centers[i].sessions, function (j, option2) { });
           auxArr2[i] =
             "<tr>" +
-            "<p>" +
             "<td>" +
+            "<b class='ppp'>" +
             result.centers[i].name +
             ", " +
             result.centers[i].block_name +
@@ -376,7 +353,7 @@ function PinForm(props) {
             result.centers[i].state_name +
             ", " +
             result.centers[i].pincode +
-            "</p></td>" +
+            "</b></td>" +
             sessionArr.join("") +
             "</tr>";
         });
@@ -451,9 +428,7 @@ function PinForm(props) {
 
 
 function LoginForm(props) {
-  let [allDists, setAllDists] = useState(null);
-  allDists = [];
-  var selectedDistrict;
+  var allDists = [];
   var origDT;
   var todaysDate;
   var n = new Date();
@@ -462,7 +437,6 @@ function LoginForm(props) {
   var d = n.getDate();
   todaysDate = d + "-" + m + "-" + y;
   origDT = y + "-" + m + "-" + d;
-  let [statee, setStatee] = useState("⬇️ Select a State ⬇️");
   let [district, setDistrict] = useState("⬇️ Select a District ⬇️");
   let [date, setDate] = useState(todaysDate);
   let [orDate, setOrDate] = useState(origDT);
@@ -476,11 +450,11 @@ function LoginForm(props) {
         date,
       success: function (result) {
         console.log(result.centers);
-        var topStr = "<tr> <th scope='col'>Centre Name</th>";
+        var topStr = "<tr> <th scope='col'><b class='bbb'>Centre Name</b></th>";
         var dt = new Date(orDate);
         for (var i = 0; i < 7; i++) {
           var str = dt.toDateString().substring(4, 16);
-          topStr += "<th scope='col'>" + str + "</th>";
+          topStr += "<th scope='col'><b class='bbb'>" + str + "</b></th>";
           dt.setDate(dt.getDate() + 1);
         }
         topStr += "</tr>"
@@ -491,7 +465,7 @@ function LoginForm(props) {
           console.log(result.centers[i].sessions);
           for (var j = 0; j < 7; j++) {
             if (result.centers[i].sessions[j] == null) {
-              sessionArr[j] = "<td><p>NA</p></td>";
+              sessionArr[j] = "<td><p class='ppp'>NA</p></td>";
             } else {
               sessionArr[j] =
                 "<td><div class='container'><div class='row'>" +
@@ -508,8 +482,9 @@ function LoginForm(props) {
           $.each(result.centers[i].sessions, function (j, option2) { });
           auxArr2[i] =
             "<tr>" +
-            "<p>" +
+            
             "<td>" +
+            "<b class='bbb'>" +
             result.centers[i].name +
             ", " +
             result.centers[i].block_name +
@@ -517,7 +492,7 @@ function LoginForm(props) {
             result.centers[i].state_name +
             ", " +
             result.centers[i].pincode +
-            "</p></td>" +
+            "</b></td>" +
             sessionArr.join("") +
             "</tr>";
         });
@@ -547,7 +522,6 @@ function LoginForm(props) {
         $("#districtdd").append(auxArr2.join(""));
       },
     });
-    setStatee(e.target.value);
   };
   let handleDistrictChange = (e) => {
     setDistrict(e.target.value);
@@ -569,7 +543,7 @@ function LoginForm(props) {
     });
   }
   return (
-    <form onSubmit={activateLasers}>
+    <form className="pinformm" onSubmit={activateLasers}>
       {/*statee*/}
       <div class="container">
         <div class="row">

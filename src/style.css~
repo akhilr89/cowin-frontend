@@ -64,12 +64,7 @@ b,
 strong {
 	font-weight: bolder
 }
-.bbb {
-	color: #5f6c80;
-}
-.ppp {
-		color: #5f6c80;
-}
+
 code,
 kbd,
 samp {
