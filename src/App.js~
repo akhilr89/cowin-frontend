@@ -6,6 +6,7 @@ import $ from "jquery";
 import states from "./states.js";
 import ScrollReveal from "scrollreveal"
 
+
 (function () {
   const doc = document
   const rootEl = doc.documentElement
@@ -61,9 +62,10 @@ import ScrollReveal from "scrollreveal"
 function App() {
   const doc = document
   const body = doc.body
-  var lightSwitch = $(".lights-toggle").val();
+  
   
   function checkLights() {
+    var lightSwitch = $(".lights-toggle").val();
     console.log(lightSwitch);
     let labelText = $('.label-text').html('dark')
     if (lightSwitch.checked) {
@@ -78,6 +80,7 @@ function App() {
       }
     }
   }
+
   return (
     <body class="is-boxed has-animations">
       <div class="body-wrap boxed-container">
@@ -100,13 +103,13 @@ function App() {
             <div class="container">
               <div class="hero-inner">
                 <div class="hero-copy">
-                  <h1 class="hero-title mt-0">Landing template for startups</h1>
-                  <p class="hero-paragraph">Our landing page template works on all devices, so you only have to set it up once, and get beautiful results forever.</p>
+                  <h1 class="hero-title mt-0">Tierd of checking availability?</h1>
+                  <p class="hero-paragraph">Sit back and relax. Our script will check for availability every minute and let you know if its available.</p>
                   <div class="hero-cta">
-                    <a class="button button-primary" href="#">Buy it now</a>
+                    <a class="button button-primary"  href="#">Subscribe now</a>
                     <div class="lights-toggle">
-                      <input id="lights-toggle" type="checkbox" name="lights-toggle" class="switch" onChange={checkLights} checked="checked" />
-                      <label for="lights-toggle" class="text-xs"><span>Turn me <span class="label-text">dark</span></span></label>
+                     {/* <input id="lights-toggle" type="checkbox" name="lights-toggle" class="switch" onChange={checkLights} checked="checked" />
+                      <label for="lights-toggle" class="text-xs"><span>Turn me <span class="label-text">dark</span></span></label>*/}
                     </div>
                   </div>
                 </div>
@@ -153,11 +156,14 @@ function App() {
                         <img class="asset-dark" src="images/feature-01-dark.svg" alt="Feature 01" />
                       </div>
                       <div class="feature-content">
-                        <h3 class="feature-title mt-0">Discover</h3>
-                        <p class="text-sm mb-0">Lorem ipsum dolor sit amet, consecte adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua dui.</p>
+                        <h3 class="feature-title mt-0">Where do we get data from?</h3>
+                        <p class="text-sm mb-0">Government has made COWIN API public and free.</p>
                       </div>
                     </div>
                   </div>
+                  <div id='some-id'>
+                  </div>
+                  
                   <div class="feature">
                     <div class="feature-inner">
                       <div class="feature-icon is-revealing">
@@ -165,8 +171,8 @@ function App() {
                         <img class="asset-dark" src="images/feature-02-dark.svg" alt="Feature 02" />
                       </div>
                       <div class="feature-content ">
-                        <h3 class="feature-title mt-0">Discover</h3>
-                        <p class="text-sm mb-0">Lorem ipsum dolor sit amet, consecte adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua dui.</p>
+                        <h3 class="feature-title mt-0">Open-Source</h3>
+                        <p class="text-sm mb-0">Open-source is LOVE. Check our repo and if contribute if possible</p>
                       </div>
                     </div>
                   </div>
@@ -187,58 +193,65 @@ function App() {
             </div>
           </section>
 
+          
+            <section class="section">
+                  <div class="container-sm">
+                      <div class="cta-inner section-inner">
+                          <div class="cta-header text-center ">
+                              <h2 class="section-title mt-0 py-6" id="helloo">Subscribe for availability</h2>
+                              <div className="section-paragraph pt-4">
+                                <div className="row">
+                                  <div className="col-sm-5">
+                                    <PinForm />
+                                  </div>
+                                  <b className="col-sm-2">or</b>
+                                  <div className="col-sm-5">
+                                    <LoginForm />
+                                  </div>
+                          <br/>
+                                  {/*district*/}
+                                </div>
+                              </div>
+                                        <div className="py-6">
+                                          <table className="table table-striped py-6">
+                                            <thead id="thead">
+                                             {/* <tr>
+                                                <th scope="col">Centre Name</th>
+                                                <th scope="col">First Day</th>
+                                                <th scope="col">Second Day</th>
+                                                <th scope="col">Third Day</th>
+                                                <th scope="col">Fourth Day</th>
+                                                <th scope="col">Fifth Day</th>
+                                                <th scope="col">Sixth Day</th>
+                                                <th scope="col">Seventh Day</th>
+                                              </tr> */}
+                                            </thead>
+                                            <tbody id="tbody">
+                                            </tbody>
+                                          </table>
+                                        </div>
+  							
+  					    </div>
+                      </div>
+                  </div>
+              </section>
           <section class="cta section">
                 <div class="container-sm">
                     <div class="cta-inner section-inner">
                         <div class="cta-header text-center">
-                            <h2 class="section-title mt-0">Get it and Switch</h2>
-                            <p class="section-paragraph">Lorem ipsum is common placeholder text used to demonstrate the graphic elements of a document or visual presentation.</p>
+                            <h2 class="section-title mt-0">Visit Cowin Portal and Register</h2>
+                            <p class="section-paragraph">Some paragraph.</p>
 							<div class="cta-cta">
-								<a class="button button-primary" href="#">Buy it now</a>
+								<a class="button button-primary" target="_blank" href="https://www.cowin.gov.in/">Open COWIN</a>
 							</div>
 					    </div>
                     </div>
                 </div>
             </section>
-          <h1 id="helloo">Subscribe for availability</h1>
-
-          <br />
-          <br />
 
           <br />
 
-          <br />
-          <div className="container">
-            <div className="row">
-              <div className="col-sm-5">
-                <PinForm />
-              </div>
-              <b className="col-sm-2">or</b>
-              <div className="col-sm-5">
-                <LoginForm />
-              </div>
 
-              {/*district*/}
-            </div>
-          </div>
-          <div className="py-3">
-            <table className="table table-striped py-3">
-              <thead id="thead">
-                <tr>
-                  <th scope="col">Centre Name</th>
-                  <th scope="col">First Day</th>
-                  <th scope="col">Second Day</th>
-                  <th scope="col">Third Day</th>
-                  <th scope="col">Fourth Day</th>
-                  <th scope="col">Fifth Day</th>
-                  <th scope="col">Sixth Day</th>
-                  <th scope="col">Seventh Day</th>
-                </tr>
-              </thead>
-              <tbody id="tbody">
-              </tbody>
-            </table>
-          </div>
         </main>
         <footer class="site-footer has-top-divider">
             <div class="container">
@@ -289,7 +302,7 @@ function App() {
                             </a>
                         </li>
                     </ul>
-                    <div class="footer-copyright">&copy; 2018 Switch, all rights reserved</div>
+                    <div class="footer-copyright">&copy; 2021 Vasant & Anuj, all rights reserved</div>
                 </div>
             </div>
         </footer>
@@ -421,11 +434,12 @@ function PinForm(props) {
             aria-label="E-mail"
           />
         </div>
-        <div class="row">
-          <button type="submit" className="btn btn-danger col-sm shadow-none">
+        <div class="row pb-4">
+        
+          <button type="submit" className="button button-primary col-sm shadow-none">
             Subscribe
           </button>
-          <button onClick={handleSubmit} className="btn btn-warning col-sm shadow-none">
+          <button onClick={handleSubmit} className="button button-danger col-sm shadow-none">
             Check Availability
           </button>
         </div>
@@ -606,10 +620,10 @@ function LoginForm(props) {
           />
         </div>
         <div class="row">
-          <button type="submit" className="btn btn-danger myButton col-sm shadow-none">
+          <button type="submit" className="button button-primary myButton col-sm shadow-none">
             Subscribe
           </button>
-          <button onClick={handleSubmit} className="btn btn-warning col-sm shadow-none">
+          <button onClick={handleSubmit} className="button button-danger col-sm shadow-none">
             Check Availability
           </button>
           {/*district*/}

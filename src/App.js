@@ -62,24 +62,23 @@ import ScrollReveal from "scrollreveal"
 function App() {
   const doc = document
   const body = doc.body
-  var lightSwitch = $(".lights-toggle").val();
-  
-  function checkLights() {
-  
-    console.log(lightSwitch);
-    let labelText = $('.label-text').html('dark')
-    if (lightSwitch.checked) {
-      body.classList.remove('lights-off')
-      if (labelText) {
-        labelText.innerHTML = 'dark'
-      }
-    } else {
-      body.classList.add('lights-off')
-      if (labelText) {
-        labelText.innerHTML = 'light'
-      }
-    }
-  }
+    let checkLights = (e) => {
+      console.log("click");
+          let labelText = $('.label-text').html('dark');
+          console.log($('#lights-toggle').is(":checked"))
+          if ($('#lights-toggle').is(":checked")) {
+          body.classList.add('lights-off')
+          if (labelText) {
+            $('.label-text').html('light');
+          }
+            
+          } else {
+            body.classList.remove('lights-off')
+            if (labelText) {
+              $('.label-text').html('dark');
+            }
+          }
+    };
 
   return (
     <body class="is-boxed has-animations">
@@ -95,6 +94,10 @@ function App() {
                             </a>
                         </h1>
                     </div>
+                         <div class="lights-toggle">
+                          <input id="lights-toggle" type="checkbox" name="lights-toggle" class="switch" onChange={checkLights} />
+                           <label for="lights-toggle" class="text-xs"></label>
+                         </div>
                 </div>
             </div>
         </header>
@@ -102,15 +105,12 @@ function App() {
           <section class="hero">
             <div class="container">
               <div class="hero-inner">
-                <div class="hero-copy">
+                ./<div class="hero-copy">
                   <h1 class="hero-title mt-0">Tierd of checking availability?</h1>
                   <p class="hero-paragraph">Sit back and relax. Our script will check for availability every minute and let you know if its available.</p>
                   <div class="hero-cta">
                     <a class="button button-primary"  href="#">Subscribe now</a>
-                    <div class="lights-toggle">
-                     {/* <input id="lights-toggle" type="checkbox" name="lights-toggle" class="switch" onChange={checkLights} checked="checked" />
-                      <label for="lights-toggle" class="text-xs"><span>Turn me <span class="label-text">dark</span></span></label>*/}
-                    </div>
+               
                   </div>
                 </div>
                 <div class="hero-media">
@@ -423,7 +423,7 @@ function PinForm(props) {
             type="date"
             onChange={handleDateChange}
             placeholder="Date (dd-mm-yyyy)"
-            aria-label="Search"
+            aria-label="Date (dd-mm-yyyy)"
           />
           <input
             class="form-control mr-sm-2 email"
@@ -607,7 +607,7 @@ function LoginForm(props) {
             type="date"
             onChange={handleDateChange}
             placeholder="Date (dd-mm-yyyy)"
-            aria-label="Search"
+            aria-label="Date (dd-mm-yyyy)"
           />
           <input
             class="form-control mr-sm-2 email"
@@ -616,7 +616,7 @@ function LoginForm(props) {
             type="email"
             id="email"
             placeholder="Enter your E-mail"
-            aria-label="Search"
+            aria-label="Enter your E-mail"
           />
         </div>
         <div class="row">
