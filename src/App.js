@@ -127,7 +127,15 @@ function App() {
                   notification by mail. Yup, it's that easy.
                 </p>
                 <div class="hero-cta">
-                  <a
+
+     <ul class="nav nav-pills">
+       <li class="nav-item">
+         <a class="button button-primary" href="#scrollspyHeading1">Subscribe Now</a>
+       </li>
+
+
+     </ul>
+               <a
                     class="button button-primary"
                     target="_blank"
                     rel="noopener noreferrer"
@@ -312,7 +320,9 @@ function App() {
             </div>
           </div>
         </section>
-
+<div data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-offset="0" class="scrollspy-example" tabindex="0">
+  <h4 id="scrollspyHeading1"></h4>
+</div>
         <section class="section">
           <div class="container-smm">
             <div class="cta-inner section-inner">
