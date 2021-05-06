@@ -5,6 +5,7 @@ import "./style.css";
 import $ from "jquery";
 import states from "./states.js";
 import ScrollReveal from "scrollreveal";
+import 'bootstrap/dist/js/bootstrap.min.js';
 
 (function () {
   const doc = document;
@@ -315,18 +316,39 @@ function App() {
         <section class="section">
           <div class="container-smm">
             <div class="cta-inner section-inner">
-              <div class="cta-header text-center ">
-                <h2 class="section-title mt-0 py-6" id="helloo">
-                  Subscribe for availability
+              <div class="cta-header  ">
+              <h2 class="section-title text-center" >
+                Check Availability and Subscribe
+              </h2>
+                <h4 class="section-title2 ml-2" >
+                  Search By
+                </h4>
+                <a></a>
+                <ul class="nav nav-tabs" id="myTab" role="tablist">
+                
+                  <li class="nav-item" role="presentation">
+                    <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true">PinCode</button>
+                  </li>
+                  <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false">District</button>
+                  </li>
+                </ul>
+                <div class="tab-content" id="myTabContent">
+                  <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab"><div className="m-5 text-center"><PinForm /></div></div>
+                  <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab"><div className="m-5 text-center"><LoginForm /></div></div>
+                </div>
+                <div class="alert alert-light" role="alert">
+                <h2 class="alert-heading" id="helloo">
                 </h2>
-                <div className="section-paragraph pt-4">
+                </div>
+
+                <div className="section-paragraph pt-1">
                   <div className="row">
                     <div className="col-sm-5">
-                      <PinForm />
+                      
                     </div>
-                    <b className="col-sm-2">or</b>
                     <div className="col-sm-5">
-                      <LoginForm />
+                      
                     </div>
                     <br />
                     {/*district*/}

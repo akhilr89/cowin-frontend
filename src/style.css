@@ -8,6 +8,18 @@ body {
 	margin: 0
 }
 
+.lights-off .nav-item {
+background-color: #5f6c80;
+}
+
+.lights-off .alert-light {
+border:none;
+background-color: #202d3f;
+}
+
+.section-title {
+	margin-bottom:40px;
+}
 article,
 aside,
 footer,
