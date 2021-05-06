@@ -141,10 +141,10 @@ function App() {
                     <p class="section-paragraph">You just need to add your Pincode or select your state and district, and date. That's all. We will check availability for the next 7 days till you get your slot.</p>
                     <div class="features-image">
                       <img class="features-illustration asset-dark" src="images/features-illustration-dark.svg" alt="Feature illustration" />
-                      <img class="features-box asset-dark" src="images/features-box-dark.svg" alt="Feature box" />
+                      <img class="features-box asset-dark" src="images/features-box-dark.png" alt="Feature box" />
                       <img class="features-illustration asset-dark" src="images/features-illustration-top-dark.svg" alt="Feature illustration top" />
                       <img class="features-illustration asset-light" src="images/features-illustration-light.svg" alt="Feature illustration" />
-                      <img class="features-box asset-light" src="images/features-box-light.svg" alt="Feature box" />
+                      <img class="features-box asset-light" src="images/features-box-light.png" alt="Feature box" />
                       <img class="features-illustration asset-light" src="images/features-illustration-top-light.svg" alt="Feature illustration top" />
                     </div>
                   </div>
@@ -158,7 +158,7 @@ function App() {
                       </div>
                       <div class="feature-content">
                         <h3 class="feature-title mt-0">Is this data genuine?</h3>
-                        <p class="text-sm mb-0">Government has made COWIN API public and free. We make of that api and give Notifications.</p>
+                        <p class="text-sm mb-0">Government has made COWIN API public(with some usage limits) and free. We make use of that api and give Notifications.</p>
                       </div>
                     </div>
                   </div>
@@ -192,7 +192,7 @@ function App() {
               </div>
             </div>
           </section>
-          
+
             <section class="section">
                   <div class="container-smm">
                       <div class="cta-inner section-inner">
