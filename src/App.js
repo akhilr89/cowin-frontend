@@ -127,13 +127,12 @@ function App() {
                   notification by mail. Yup, it's that easy.
                 </p>
                 <div class="hero-cta">
-                  <ul class="nav nav-pills">
-                    <li class="nav-item">
-                      <a class="button button-primary" href="#subscription">
-                        Subscribe Now
-                      </a>
-                    </li>
-                  </ul>
+                  <a
+                    class="button nav-item button-primary text-center"
+                    href="#subscription"
+                  >
+                    Subscribe Now
+                  </a>
                   <a
                     class="button button-primary"
                     target="_blank"
@@ -393,19 +392,12 @@ function App() {
                     </div>
                   </div>
                 </div>
-                <div class="alert alert-light" role="alert">
+                <div class="alert alert-light text-center" role="alert">
                   <h2 class="alert-heading" id="helloo"></h2>
                 </div>
-                <div className="section-paragraph pt-1">
-                  <div className="row">
-                    <div className="col-sm-5"></div>
-                    <div className="col-sm-5"></div>
-                    <br />
-                    {/*district*/}
-                  </div>
-                </div>
-                <div className="py-6">
-                  <table className="table table-striped py-6">
+                
+                <div className="py-2">
+                  <table className="table table-striped">
                     <thead id="thead">
                       {/* <tr>
                                                 <th scope="col">Centre Name</th>
