@@ -6,7 +6,7 @@ import $ from "jquery";
 import states from "./states.js";
 import ScrollReveal from "scrollreveal";
 import "bootstrap/dist/js/bootstrap.min.js";
-import { Modal } from 'bootstrap';
+import { Modal } from "bootstrap";
 
 (function () {
   const doc = document;
@@ -391,16 +391,29 @@ function App() {
                     </div>
                   </div>
                 </div>
-               <div class="modal fade" id="myModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-         <div class="modal-dialog">
-           <div class="modal-content">
-             <div class="modal-header">
-               <h5 class="modal-title" id="fbresult">Modal title</h5>
-               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-             </div>
-           </div>
-         </div>
-       </div>
+                <div
+                  class="modal fade"
+                  id="myModal"
+                  tabindex="-1"
+                  aria-labelledby="exampleModalLabel"
+                  aria-hidden="true"
+                >
+                  <div class="modal-dialog">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title" id="fbresult">
+                          Modal title
+                        </h5>
+                        <button
+                          type="button"
+                          class="btn-close"
+                          data-bs-dismiss="modal"
+                          aria-label="Close"
+                        ></button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
 
                 <div className="py-2">
                   <table className="table table-striped">
@@ -612,9 +625,8 @@ function PinForm(props) {
       { email: email, pincode: pincode, date: date },
       function (result) {
         $("#fbresult").html(result.success);
-        var myModal = new Modal(document.getElementById('myModal'), {});
-myModal.toggle();
-
+        var myModal = new Modal(document.getElementById("myModal"), {});
+        myModal.toggle();
       }
     );
   }
@@ -784,7 +796,9 @@ function LoginForm(props) {
       "https://cowin-realpython.herokuapp.com/addD",
       { email: email, district: district, date: date },
       function (result) {
-        $("#helloo").html(result.success);
+        $("#fbresult").html(result.success);
+        var myModal = new Modal(document.getElementById("myModal"), {});
+        myModal.toggle();
       }
     );
   }
