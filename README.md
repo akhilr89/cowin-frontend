@@ -5,14 +5,22 @@ This directory is a brief example of a [React](https://reactjs.org/) app with [S
 
 _Live Example: https://cowin-availability.vercel.app_
 
-### How We Created This Example
+### How We Run the project
 
-To get started with React, along with [Serverless Functions](https://vercel.com/docs/v2/serverless-functions/introduction), with Vercel, you can use the [Create-React-App CLI](https://reactjs.org/docs/create-a-new-react-app.html#create-react-app) to initialize the project:
+Step 1 : Install NodeJs, yarn package manager.
 
+
+Step 2 : Install Node Modules.
 ```shell
 $ yarn install
 ```
 
+Step 3 : Run Development Server
 ```shell
 $ yarn dev
+```
+
+For Prod Build
+```shell
+$ yarn build
 ```

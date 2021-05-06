@@ -629,7 +629,7 @@ function PinForm(props) {
             required
             type="date"
             onChange={handleDateChange}
-            placeholder="Date (dd-mm-yyyy)"
+            placeholder="Check Availablity on "
             aria-label="Date (dd-mm-yyyy)"
           />
           <input
@@ -818,7 +818,7 @@ function LoginForm(props) {
             id="date"
             type="date"
             onChange={handleDateChange}
-            placeholder="Date (dd-mm-yyyy)"
+            placeholder="Check Availablity on "
             aria-label="Date (dd-mm-yyyy)"
           />
           <input
