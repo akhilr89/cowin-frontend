@@ -401,9 +401,7 @@ function App() {
            </div>
          </div>
        </div>
-                <div class="alert alert-light text-center" role="alert">
-                  <h2 class="alert-heading" id="helloo"></h2>
-                </div>
+
                 <div className="py-2">
                   <table className="table table-striped">
                     <thead id="thead">
