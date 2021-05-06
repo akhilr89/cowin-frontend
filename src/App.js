@@ -320,11 +320,11 @@ function App() {
               <h2 class="section-title text-center" >
                 Check Availability and Subscribe
               </h2>
-                <h4 class="section-title2 ml-2" >
+                <h5 class="section-title2 text-center ml-2" >
                   Search By
-                </h4>
+                </h5>
                 <a></a>
-                <ul class="nav nav-tabs" id="myTab" role="tablist">
+                <ul class="nav nav-tabs justify-content-center" id="myTab" role="tablist">
                 
                   <li class="nav-item" role="presentation">
                     <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true">PinCode</button>
