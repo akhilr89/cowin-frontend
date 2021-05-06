@@ -130,7 +130,7 @@ function App() {
 
      <ul class="nav nav-pills">
        <li class="nav-item">
-         <a class="button button-primary" href="#scrollspyHeading1">Subscribe Now</a>
+         <a class="button button-primary" href="#subscription">Subscribe Now</a>
        </li>
 
 
@@ -321,7 +321,7 @@ function App() {
           </div>
         </section>
 <div data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-offset="0" class="scrollspy-example" tabindex="0">
-  <h4 id="scrollspyHeading1"></h4>
+  <h4 id="subscription"></h4>
 </div>
         <section class="section">
           <div class="container-smm">
@@ -335,7 +335,6 @@ function App() {
                 </h5>
                 <a></a>
                 <ul class="nav nav-tabs justify-content-center" id="myTab" role="tablist">
-                
                   <li class="nav-item" role="presentation">
                     <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true">PinCode</button>
                   </li>
