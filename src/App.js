@@ -552,7 +552,7 @@ function PinForm(props) {
       <div class="container">
         <div class="row">
           <input
-            class="form-control mr-sm-2 pincode"
+            class="form-control mr-sm-2 pincode my-1"
             name="pincode"
             required
             type="text"
@@ -561,7 +561,7 @@ function PinForm(props) {
             aria-label="PinCode"
           />
           <input
-            class="form-control mr-sm-2 date"
+            class="form-control mr-sm-2 date my-1"
             name="date"
             required
             type="date"
@@ -570,7 +570,7 @@ function PinForm(props) {
             aria-label="Date (dd-mm-yyyy)"
           />
           <input
-            class="form-control mr-sm-2 email"
+            class="form-control mr-sm-2 email my-1"
             name="email"
             required
             type="email"
@@ -728,7 +728,7 @@ function LoginForm(props) {
           <select
             id="state-dd"
             name="state"
-            className="form-select col-sm state"
+            className="form-select col-sm state  my-1"
             onChange={handleStateChange}
           >
             <option value="⬇️ Select a State ⬇️">Select a State</option>
@@ -739,7 +739,7 @@ function LoginForm(props) {
           <select
             id="districtdd"
             name="district"
-            className="form-select col-sm distict"
+            className="form-select col-sm distict my-1"
             onChange={handleDistrictChange}
           >
             <option value="⬇️ Select a District ⬇️">Select a District</option>
@@ -749,7 +749,7 @@ function LoginForm(props) {
             ))}
           </select>
           <input
-            class="form-control mr-sm-2"
+            class="form-control mr-sm-2 my-1"
             name="date"
             required
             id="date"
@@ -759,7 +759,7 @@ function LoginForm(props) {
             aria-label="Date (dd-mm-yyyy)"
           />
           <input
-            class="form-control mr-sm-2 email"
+            class="form-control mr-sm-2 email my-1"
             name="email"
             required
             type="email"
