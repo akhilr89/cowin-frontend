@@ -6,6 +6,7 @@ import $ from "jquery";
 import states from "./states.js";
 import ScrollReveal from "scrollreveal";
 import "bootstrap/dist/js/bootstrap.min.js";
+import { Modal } from 'bootstrap';
 
 (function () {
   const doc = document;
@@ -63,9 +64,7 @@ function App() {
   const doc = document;
   const body = doc.body;
   let checkLights = (e) => {
-    console.log("click");
     let labelText = $(".label-text").html("dark");
-    console.log($("#lights-toggle").is(":checked"));
     if ($("#lights-toggle").is(":checked")) {
       body.classList.add("lights-off");
       if (labelText) {
@@ -392,6 +391,16 @@ function App() {
                     </div>
                   </div>
                 </div>
+               <div class="modal fade" id="myModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+         <div class="modal-dialog">
+           <div class="modal-content">
+             <div class="modal-header">
+               <h5 class="modal-title" id="fbresult">Modal title</h5>
+               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+             </div>
+           </div>
+         </div>
+       </div>
                 <div class="alert alert-light text-center" role="alert">
                   <h2 class="alert-heading" id="helloo"></h2>
                 </div>
@@ -532,7 +541,6 @@ function PinForm(props) {
         "&date=" +
         date,
       success: function (result) {
-        console.log(result.centers);
         var topStr = "<tr> <th scope='col'><b class='bbb'>Centre Name</b></th>";
         var dt = new Date(orDate);
         for (var i = 0; i < 7; i++) {
@@ -545,7 +553,6 @@ function PinForm(props) {
         var auxArr2 = [];
         var sessionArr = [];
         $.each(result.centers, function (i, option) {
-          console.log(result.centers[i].sessions);
           for (var j = 0; j < 7; j++) {
             if (result.centers[i].sessions[j] == null) {
               sessionArr[j] = "<td><p class='ppp'>NA</p></td>";
@@ -606,7 +613,10 @@ function PinForm(props) {
       "https://cowin-realpython.herokuapp.com/addP",
       { email: email, pincode: pincode, date: date },
       function (result) {
-        $("#helloo").html(result.success);
+        $("#fbresult").html(result.success);
+        var myModal = new Modal(document.getElementById('myModal'), {});
+myModal.toggle();
+
       }
     );
   }
@@ -682,7 +692,6 @@ function LoginForm(props) {
         "&date=" +
         date,
       success: function (result) {
-        console.log(result.centers);
         var topStr = "<tr> <th scope='col'><b class='bbb'>Centre Name</b></th>";
         var dt = new Date(orDate);
         for (var i = 0; i < 7; i++) {
@@ -695,7 +704,6 @@ function LoginForm(props) {
         var auxArr2 = [];
         var sessionArr = [];
         $.each(result.centers, function (i, option) {
-          console.log(result.centers[i].sessions);
           for (var j = 0; j < 7; j++) {
             if (result.centers[i].sessions[j] == null) {
               sessionArr[j] = "<td><p class='ppp'>NA</p></td>";
@@ -779,7 +787,6 @@ function LoginForm(props) {
       { email: email, district: district, date: date },
       function (result) {
         $("#helloo").html(result.success);
-        console.log(result);
       }
     );
   }
