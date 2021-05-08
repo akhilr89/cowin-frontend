@@ -18,6 +18,10 @@ position: relative;
   input[type="date"]:valid:before {
     content: "";
   }
+#foo {
+ display:flex;
+ align-items:center;
+}
 
 .lights-off .nav-item {
 background-color: #5f6c80;
