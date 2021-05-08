@@ -12,7 +12,7 @@ Step 1 : Install NodeJs, yarn package manager.
 
 Step 2 : Install Node Modules.
 ```shell
-$ yarn install
+$ yarn
 ```
 
 Step 3 : Run Development Server
