@@ -20,6 +20,8 @@ Step 3 : Run Development Server
 $ yarn dev
 ```
 
+Visit localhost:3000
+
 For Prod Build
 ```shell
 $ yarn build

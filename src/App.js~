@@ -574,7 +574,7 @@ function PinForm(props) {
   let [date, setDate] = useState(todaysDate);
   let [orDate, setOrDate] = useState(origDT);
   const handleSubmit = (e) => {
-  $("#subBtn1").css("visibility", "hidden");
+  $("subBtn1").css("visibility", "hidden");
     e.preventDefault();
     $.ajax({
       url:
